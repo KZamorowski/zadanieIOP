@@ -22,7 +22,20 @@ int main() {
         cout << "MENU" << endl;
         cout << "Podaj numer czynnosci, ktora chcesz wykonac" << endl;
         cout << "0. Wyjscie" << endl;
+	cout << "1. Sprawdź, czy liczba jest pierwsza" << endl;
         cin >> wyjscie;
+
+        if (wyjscie == 1) {
+            int liczba;
+            cout << "Podaj liczbe: ";
+            cin >> liczba;
+            if (czyPierwsza(liczba)) {
+                cout << liczba << " jest liczbą pierwszą." << endl;
+            } else {
+                cout << liczba << " nie jest liczbą pierwszą." << endl;
+            }
+        }
+   
     } while(wyjscie != 0);
     return 0;
 }
